@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-.{
+/* .{
     font-family: 'Roboto Mono';
     font-size: 22px;
+} */
+
+* {
+    box-sizing: border-box;
 }
 
 :root {
@@ -20,7 +24,7 @@ body {
 }
 
 .h1 {
-    position: absolute;
+    /* position: absolute; */
     font-size: 50px;
     font-weight: bold;
     padding-top: 5%;

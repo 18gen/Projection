@@ -5,26 +5,54 @@ import Link from "next/link";
 import "./styles.css";
 
 
+
 const Landing = () => {
   return (
     <div className="container">
-    <div className="title-and-video">
-      <h1 className='h1'>Geese Hacks</h1>
+      <div className="title-and-video">
+        <div className='about-title'>
+          <h1 className='h1'>Geese Hacks</h1>
+          <p className="setLeft" style={{ fontSize: "20px" }}>September.</p>
+          <div className="setLeft" style={{ paddingTop: "50px" }}>
+            <Link className="view-modal" href="/users">Apply to UWH</Link>
+          </div>
+        </div>
 
         <video autoPlay loop muted className="background-video">
-          <source src="/goose.mp4" type="video/mp4"/>
+          <source src="/goose.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <p className="setLeft" style = {{fontSize: "20px"}}>September.</p>
-      <div className="setLeft" style = {{paddingTop: "50px"}}>
-        <Link className="view-modal" href="/users">Apply to UWH</Link>
-      </div>
-      
+
+
     </div>
   )
 }
 
+const initialItems: Array<JSX.Element> = [
+  <li key="item1">30+ Spsonsors</li>,
+  <img key="img1" src="./geese/g1.gif" alt="g1" />,
+  <li key="item2">30+ Sponsors</li>,
+  <img key="img2" src="./geese/g1.gif" alt="g1" />,
+  <li key="item3">30+ Sponsors</li>,
+  <img key="img3" src="./geese/g1.gif" alt="g1" />,
+  <li key="item4">30+ Sponsors</li>,
+  <img key="img4" src="./geese/g1.gif" alt="g1" />,
+  <li key="item5">30+ Sponsors</li>,
+  <img key="img4" src="./geese/g1.gif" alt="g1" />,
+];
+const nextItems: Array<JSX.Element> = [
+  <li key="item1">20+ Sponsors</li>,
+  <img key="img1" src="./geese/g2.gif" alt="g1" />,
+  <li key="item2">20+ Sponsors</li>,
+  <img key="img2" src="./geese/g2.gif" alt="g1" />,
+  <li key="item3">20+ Sponsors</li>,
+  <img key="img3" src="./geese/g2.gif" alt="g1" />,
+  <li key="item4">20+ Sponsors</li>,
+  <img key="img4" src="./geese/g2.gif" alt="g1" />,
+  <li key="item5">20+ Sponsors</li>,
+  <img key="img4" src="./geese/g2.gif" alt="g1" />,
+];
 
 const Scroller: React.FC = () => {
   const leftScrollerRef = useRef<HTMLDivElement>(null);
@@ -34,30 +62,7 @@ const Scroller: React.FC = () => {
 
   // Logic to duplicate items and set them for left and right scrollers
   useEffect(() => {
-    const initialItems: Array<JSX.Element> = [
-      <li key="item1">30+ Sponsors</li>,
-      <img key="img1" src="./geese/g1.gif" alt="g1"/>,
-      <li key="item2">30+ Sponsors</li>,
-      <img key="img2" src="./geese/g1.gif" alt="g1"/>,
-      <li key="item3">30+ Sponsors</li>,
-      <img key="img3" src="./geese/g1.gif" alt="g1"/>,
-      <li key="item4">30+ Sponsors</li>,
-      <img key="img4" src="./geese/g1.gif" alt="g1"/>,
-      <li key="item5">30+ Sponsors</li>,
-      <img key="img4" src="./geese/g1.gif" alt="g1"/>,
-    ];
-    const nextItems: Array<JSX.Element> = [
-      <li key="item1">20+ Sponsors</li>,
-      <img key="img1" src="./geese/g2.gif" alt="g1"/>,
-      <li key="item2">20+ Sponsors</li>,
-      <img key="img2" src="./geese/g2.gif" alt="g1"/>,
-      <li key="item3">20+ Sponsors</li>,
-      <img key="img3" src="./geese/g2.gif" alt="g1"/>,
-      <li key="item4">20+ Sponsors</li>,
-      <img key="img4" src="./geese/g2.gif" alt="g1"/>,
-      <li key="item5">20+ Sponsors</li>,
-      <img key="img4" src="./geese/g2.gif" alt="g1"/>,
-    ];
+
     setLeftItems([...initialItems, ...initialItems]); // Duplicate items for the left scroller
     setRightItems([...nextItems, ...nextItems]); // Duplicate items for the right scroller
   }, []);
@@ -95,7 +100,7 @@ const Scroller: React.FC = () => {
     </div>
   );
 };
-      
+
 
 const InfoSection: React.FC = () => {
   return (
@@ -103,7 +108,7 @@ const InfoSection: React.FC = () => {
       <h2 className="info-heading">about Geese Hacks</h2>
       <p className="info-date">Sept.20-22 @University of Waterloo</p>
       <p className="info-text">
-        Geese Hacks is a week long hackathon aimed to tackle real 
+        Geese Hacks is a week long hackathon aimed to tackle real
         organizational problem through the perspective of business and tech
       </p>
       <h3 className="info-title">Applications TBD</h3>
@@ -116,10 +121,10 @@ const InfoSection: React.FC = () => {
 const About = () => {
   return (
     <div style={{ paddingTop: "13%" }}>
-      <Landing/>
-      <Scroller/> {/* second scroller is not in loop yet :)) */}
+      <Landing />
+      <Scroller /> {/* second scroller is not in loop yet :)) */}
       <div className='info-section-container'>
-      <InfoSection/> { /* About Geese Hacks */}
+        <InfoSection /> { /* About Geese Hacks */}
       </div>
     </div>
 
