@@ -1,4 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.{
+    font-family: 'Roboto Mono';
+    font-size: 22px;
+}
+
+:root {
+    --background-rgb: 0, 0, 0; /* or 25, 24, 32 */
+    --foreground-rgb: 241, 243, 244; /* white */
+}
+
+body {
+    background-color: rgb(var(--background-rgb));
+    color: rgb(var(--foreground-rgb));
+}
+
+.h1 {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 5%;
+    padding-left: 10%;
+    z-index: 10;
+}
+
+.h2 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.black {
+    background-color: rgb(var(--background-rgb));
+    color: rgb(var(--background-rgb));
+}
+
+.white {
+    background-color: rgb(var(--foreground-rgb));
+    color: rgb(var(--foreground-rgb));
+}

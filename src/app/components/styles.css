@@ -1,0 +1,262 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background: rgb(var(--background-rgb));
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    justify-content: space-between;
+    display: flex;
+}
+
+.rightContent {
+    display: flex;
+    align-items: center;
+}
+
+.view-modal {
+    color: #f1f3f4;
+    padding: 3px 13px;
+    border-radius: 4px;
+    background-color: transparent; 
+    border: 1px solid #f1f3f4; 
+    transition: all 0.3s ease; 
+    font-weight: bold;
+}
+
+.view-modal:hover {
+    background-color: #f1f3f4; 
+    color:  rgb(var(--background-rgb));
+    border-color: #f1f3f4;
+}
+
+.nav {
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 16px;
+    padding: 20px 10px;
+}
+
+.setLeft {
+    position: absolute;
+    top: 450px;
+    padding-left: 10%;
+    z-index: 10;
+}
+
+
+@media (max-width: 1200px) {
+    .setLeft {
+        top: 350px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .setLeft {
+        top: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .setLeft {
+        top: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .setLeft {
+        top: 200px;
+    }
+}
+
+
+.text {
+    font-size: 17px;
+    text-align: center;
+}
+
+.text2 {
+    font-size: 14px;
+    text-align: center;
+}
+.container {
+    margin-bottom: 5%;
+}
+
+.title-and-video {
+    display: flex;
+    justify-content: space-between;
+}
+
+.background-video {
+    right: 0;
+    padding-top: 0px;
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+/* Scroller */
+.scroller {
+    margin:0 auto;
+    width:80%;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+    border-right: 10%;
+    mask-image: linear-gradient(to right, transparent, 
+    rgb(var(--background-rgb)) 5%, rgb(var(--background-rgb)) 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, 
+    rgb(var(--background-rgb)) 5%, rgb(var(--background-rgb)) 95%, transparent);
+}
+
+.scroller-inner {
+    display: flex;
+    width: auto;
+    height: 50px;
+}
+
+.scroller-inner li {
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.toLeft { animation: scroll-left  50s  linear infinite; }
+.toRight { animation: scroll-right 30s linear infinite; }
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+.info-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+.info-section {
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    background: rgb(241, 243, 244);
+    border-radius: 8px;
+    margin: 50px 40px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-heading {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.info-date {
+    color: #666;
+    margin-top: 0;
+}
+
+.info-title {
+    color: #333;
+    margin-top: 10px;
+}
+
+.info-text {
+    color: #5f6368;
+    margin: 10px 10px;
+    font-size: 18px;
+}
+
+.apply-button {
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #0056b3; 
+}
+
+
+/* Sponsorship */
+
+
+.sponsor-card {
+    padding: 20px 10%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.sponsor-logo {
+
+    background: #fff; /* White background for the logo */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px; /* The logo block will take up the full width of the sponsor-card */
+    height: 250px;
+    padding: 20px; /* Adjust the padding as needed */
+    box-sizing: border-box;
+}
+
+.sponsor-description {
+    font-size: 15px;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.sponsor-logo img {
+    max-width: 100%; /* Ensures the logo is responsive and does not overflow */
+    max-height: 100px; /* Adjust the height as needed */
+}
+
+.sponsor-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .sponsor-card {
+        flex-direction: column; /* Stack logo and description vertically */
+        align-items: center; /* Center-align items for small screens */
+        text-align: center; /* Center-align text for small screens */
+    }
+
+    .sponsor-logo {
+        margin-bottom: 1rem; /* Add space between logo and description */
+    }
+
+    .sponsor-description {
+        width: 100%; /* Allow description to take full width below logo */
+    }
+}
+
+

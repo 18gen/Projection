@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import FooterLogo from "../../../public/FooterLogo.png";
+import FooterLogo from "../../../public/logo/footerLogo.png";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "black", color: "white", padding: "20px"  }}>
-      <Image src={FooterLogo} alt="FooterLogo"/>
+    <footer style={{ padding: "20px"}}>
+      <Image src={FooterLogo} width = "400" alt="FooterLogo"/>
     </footer>
   );
 };  
