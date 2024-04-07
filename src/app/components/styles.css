@@ -1,3 +1,4 @@
+
 .header {
     position: fixed;
     width: 100%;
@@ -6,6 +7,7 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     justify-content: space-between;
     display: flex;
+    padding: 0px 30px
 }
 
 .rightContent {
@@ -34,10 +36,22 @@
     font-size: 17px;
     margin-left: 16px;
     padding: 20px 10px;
+    color: white; /* Set text color to white */
+}
+
+a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline */
+    outline: none;
+    text-decoration: none
+}
+
+/* Add this rule to ensure that links have default cursor on hover */
+a:hover {
+    cursor: default;
 }
 
 .setLeft {
-    position: absolute;
     top: 450px;
     padding-left: 10%;
     z-index: 10;
@@ -78,21 +92,25 @@
     font-size: 14px;
     text-align: center;
 }
+
 .container {
-    margin-bottom: 5%;
+    margin: 0 50px 5%;
 }
 
 .title-and-video {
     display: flex;
-    justify-content: space-between;
+}
+
+.about-title {
+    width: 40%
 }
 
 .background-video {
-    right: 0;
-    padding-top: 0px;
-    width: 70%;
-    height: auto;
-    position: relative;
+    /* right: 0; */
+    /* padding-top: 0px; */
+    width: 60%;
+    /* height: auto; */
+    /* position: relative; */
 }
 
 /* Scroller */
@@ -241,6 +259,50 @@
 .sponsor-logo:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.partner-card {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center-align items horizontally */
+    justify-content: center; /* Center content vertically within the card */
+    text-align: center; /* Center-align text within the card */
+}
+
+.partner-logo {
+
+    background: #fff; /* White background for the logo */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px; /* The logo block will take up the full width of the partner-card */
+    height: 130px;
+    padding: 10px; /* Adjust the padding as needed */
+    box-sizing: border-box;
+}
+
+.partner-logo img {
+    max-width: 100%; /* Ensures the logo is responsive and does not overflow */
+    max-height: 100px; /* Adjust the height as needed */
+}
+
+.partner-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.partner-card-containers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 1rem; /* Space between cards */
+    margin-top: 40px; /* Top margin for the whole container */
+    padding: 0 10%; /* Horizontal padding for the container */
+
 }
 
 @media (max-width: 1200px) {
