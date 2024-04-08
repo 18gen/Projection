@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
 
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
 
-/* .{
-    font-family: 'Roboto Mono';
-    font-size: 22px;
-} */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
+  }
+  
 
 :root {
     --background-rgb: 0, 0, 0; /* or 25, 24, 32 */
@@ -19,6 +20,7 @@
 }
 
 body {
+    font-family: 'Roboto Mono', monospace;
     background-color: rgb(var(--background-rgb));
     color: rgb(var(--foreground-rgb));
 }

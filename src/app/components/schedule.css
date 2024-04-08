@@ -1,0 +1,66 @@
+schedule-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    background: black; /* Assuming black background based on your screenshot */
+    color: white; /* Assuming white text based on your screenshot */
+  }
+  
+  .schedule-header {
+    text-align: center;
+    color: #f1f3f4; /* Or the specific color code used for the header */
+    margin-bottom: 2rem;
+  }
+  
+  /* Day 0 - Full Width */
+  .day-full-width {
+    margin-bottom: 2rem; /* Spacing between Day 0 and the two-column layout */
+  }
+  
+  /* Days 1 and 2 - Two Column Layout */
+  .days-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .day-column {
+    flex-basis: calc(50% - 1rem); /* Adjust the space between columns if necessary */
+    margin-bottom: 2rem;
+  }
+
+.day-title {
+    color: #ea4335; /* Or the specific color code used */
+    font-size: 1.5em;
+    margin-bottom: 0.25rem;
+}
+
+.day-date {
+    font-size: 1.25em;
+    margin-bottom: 1rem;
+}
+
+.event {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-time {
+    font-weight: bold;
+}
+
+.event-title {
+    padding-left: 1rem; /* Space between time and title */
+}
+
+/* Add responsive styles if necessary */
+@media (max-width: 768px) {
+    .days-container {
+      flex-direction: column;
+    }
+  
+    .day-column {
+      flex-basis: 100%;
+    }
+  }
