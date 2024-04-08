@@ -7,7 +7,7 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     justify-content: space-between;
     display: flex;
-    padding: 0px 30px
+    padding: 0px 30px;
 }
 
 .rightContent {
@@ -163,65 +163,43 @@ a:hover {
     }
 }
 
-.info-section-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px; /* Add some padding on the sides */
+/* InfoSection */
+
+.info-container {
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    padding: 2rem;
+    color: white;
+    max-width: 800px; /* Adjusted for CSS */
+    margin: 50px auto;
 }
 
-.info-section {
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
-    background: rgb(241, 243, 244);
-    border-radius: 8px;
-    margin: 50px 40px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.info-header-dots {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.info-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .info-heading {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bold;
-    color: #000000;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 
-.info-date {
-    color: #666;
-    margin-top: 0;
-}
-
-.info-title {
-    color: #333;
-    margin-top: 10px;
-}
-
-.info-text {
-    color: #5f6368;
-    margin: 10px 10px;
-    font-size: 18px;
-}
-
-.apply-button {
-    background-color: #007BFF;
-    color: #ffffff;
-    text-decoration: none;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.apply-button:hover {
-    background-color: #0056b3; 
+.info-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 
 /* Sponsorship */
-
 
 .sponsor-card {
     padding: 20px 10%;
@@ -232,7 +210,6 @@ a:hover {
 }
 
 .sponsor-logo {
-
     background: #fff; /* White background for the logo */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -261,10 +238,35 @@ a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.sponsor-tier2 {
+    display: grid;
+    gap: 1rem; /* Space between cards */
+    margin-top: 40px; /* Top margin for the whole container */
+    padding: 0 10%; /* Horizontal padding for the container */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sponsor-tier3 {
+    display: grid;
+    gap: 1rem; /* Space between cards */
+    margin-top: 40px; /* Top margin for the whole container */
+    padding: 0 10%; /* Horizontal padding for the container */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.partner-card-containers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three columns with equal width */
+    gap: 1rem; /* Space between cards */
+    margin-top: 40px; /* Top margin for the whole container */
+    padding: 0 10%; /* Horizontal padding for the container */
+}
+
 .partner-card {
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column; /* Stack logo and text vertically */
     align-items: center; /* Center-align items horizontally */
@@ -273,10 +275,7 @@ a:hover {
 }
 
 .partner-logo {
-
     background: #fff; /* White background for the logo */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,19 +290,11 @@ a:hover {
     max-height: 100px; /* Adjust the height as needed */
 }
 
-.partner-logo:hover {
+.partner-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.partner-card-containers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-    gap: 1rem; /* Space between cards */
-    margin-top: 40px; /* Top margin for the whole container */
-    padding: 0 10%; /* Horizontal padding for the container */
-
-}
 
 @media (max-width: 1200px) {
     .sponsor-card {

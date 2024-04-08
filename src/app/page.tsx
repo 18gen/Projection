@@ -5,14 +5,15 @@ import Sponsor from "./components/sponsor";
 import Footer from "./components/footer";
 import "./globals.css";
 import AboutGeeseHacks from "./components/terminal";
+import Schedule from "./components/schedule";
 
 export default function Home() {
   return (
     <main>
       <Header/>
       <About/>
-      <AboutGeeseHacks />
       <Sponsor/>
+      <Schedule/>
       <FAQ/>
       <Footer/>
     </main>

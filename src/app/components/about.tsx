@@ -102,21 +102,26 @@ const Scroller: React.FC = () => {
 };
 
 
-const InfoSection: React.FC = () => {
+const InfoSection = () => {
   return (
-    <div className="info-section">
-      <h2 className="info-heading">about Geese Hacks</h2>
-      <p className="info-date">Sept.20-22 @University of Waterloo</p>
-      <p className="info-text">
-        Geese Hacks is a week long hackathon aimed to tackle real
-        organizational problem through the perspective of business and tech
+    <div className="info-container">
+      <div className="info-header-dots">
+        <span className="info-dot" style={{ backgroundColor: '#FF6257' }}></span>
+        <span className="info-dot" style={{ backgroundColor: '#FFBD2E' }}></span>
+        <span className="info-dot" style={{ backgroundColor: '#27C93F' }}></span>
+      </div>
+      <h2 className="info-heading">About Geese Hacks</h2>
+      <p className="info-paragraph">
+        Projection is a week-long hackathon aimed at tackling real organizational 
+        problems through the perspective of business and tech.
       </p>
-      <h3 className="info-title">Applications TBD</h3>
-      <p className="info-date">closes midnight August 25th</p>
-      <Link href="/apply" className="apply-button">Apply to Participate!</Link>
+      <p className="info-paragraph">
+        Projection is Waterloo's biggest Google-sponsored hackathon, backed by 
+        the University of Waterloo.
+      </p>
     </div>
   );
-}
+};
 
 const About = () => {
   return (
