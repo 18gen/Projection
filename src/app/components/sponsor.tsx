@@ -13,7 +13,7 @@ const SponsorCardTier1 = ({ name, logo, description, link }: { name: string; log
       </div>
       <div className="sponsor-description">
         <p>{description}</p>
-        <Link href={link}>{'>'} Explore {name}</Link>
+        <Link href={link}> Explore {name}</Link>
       </div>
     </div>
   );

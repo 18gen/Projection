@@ -116,7 +116,7 @@ const InfoSection = () => {
         problems through the perspective of business and tech.
       </p>
       <p className="info-paragraph">
-        Projection is Waterloo's biggest Google-sponsored hackathon, backed by 
+        Projection is Waterloo&apos;s biggest Google-sponsored hackathon, backed by 
         the University of Waterloo.
       </p>
     </div>
