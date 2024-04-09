@@ -36,11 +36,11 @@
     font-size: 17px;
     margin-left: 16px;
     padding: 20px 10px;
-    color: white; /* Set text color to white */
+    color: f1f3f4; /* Set text color to white */
 }
 
 a {
-    color: white; /* Set link color to white */
+    color: #f1f3f4; /* Set link color to white */
     text-decoration: none; /* Remove underline */
     outline: none;
     text-decoration: none
@@ -141,7 +141,7 @@ a:hover {
     white-space: nowrap;
 }
 
-.toLeft { animation: scroll-left  50s  linear infinite; }
+.toLeft { animation: scroll-left  30s  linear infinite; }
 .toRight { animation: scroll-right 30s linear infinite; }
 
 
@@ -164,15 +164,33 @@ a:hover {
 }
 
 /* InfoSection */
-
-.info-container {
+.info-section-wrapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Lower than info-container but higher than default */
+  }
+  
+  .info-section-wrapper:before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Adjust based on your needs */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(var(--background-rgb));
+    z-index: -1; /* Behind the content but in front of the default stack */
+  }
+  
+  .info-container {
     background-color: #1E1E1E;
     border-radius: 8px;
     padding: 2rem;
     color: white;
-    max-width: 800px; /* Adjusted for CSS */
+    max-width: 800px;
     margin: 50px auto;
-}
+    position: relative; /* Ensure that z-index is applied correctly */
+    z-index: 2; /* On top of the before pseudo-element */
+  }
 
 .info-header-dots {
     display: flex;
@@ -223,9 +241,10 @@ a:hover {
 }
 
 .sponsor-description {
-    font-size: 15px;
+    font-size: 16px;
     flex: 1;
-    padding: 0 20px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
 }
 
 .sponsor-logo img {
@@ -292,11 +311,6 @@ a:hover {
     max-height: 100px; /* Adjust this value as needed */
 }
 
-@media (max-width: 500px) {
-    .partner-card {
-    }
-}
-
 .partner-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -307,7 +321,6 @@ a:hover {
     .sponsor-card {
         flex-direction: column; /* Stack logo and description vertically */
         align-items: center; /* Center-align items for small screens */
-        text-align: center; /* Center-align text for small screens */
     }
 
     .sponsor-logo {
@@ -316,6 +329,7 @@ a:hover {
 
     .sponsor-description {
         width: 100%; /* Allow description to take full width below logo */
+        font-size: 15px;
     }
 }
 

@@ -88,7 +88,7 @@ const Scroller: React.FC = () => {
     if (leftScrollerRef.current) { loopScroll(leftScrollerRef.current, 'left'); }
     if (rightScrollerRef.current) { loopScroll(rightScrollerRef.current, 'right'); }
   }, [toLeftItems, toRightItems]); // Depend on items to reapply effect when items change
-
+  
   return (
     <div className="scroller">
       <div className="scroller-inner toLeft" ref={leftScrollerRef}>
@@ -125,10 +125,10 @@ const InfoSection = () => {
 
 const About = () => {
   return (
-    <div style={{ paddingTop: "13%" }}>
+    <div style={{ paddingTop: "13%", backgroundColor: "black"}}>
       <Landing />
       <Scroller /> {/* second scroller is not in loop yet :)) */}
-      <div className='info-section-container'>
+      <div className="info-section-wrapper">
         <InfoSection /> { /* About Geese Hacks */}
       </div>
     </div>
