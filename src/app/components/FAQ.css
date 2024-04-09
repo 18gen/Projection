@@ -1,0 +1,8 @@
+.faq-container {
+    padding: 2rem 5%; /* Adjust the '2rem' for vertical padding as desired */
+}
+
+/* Additional CSS for space between FAQ items */
+.faq-item {
+    margin-top: 1rem; /* Adjust the '2rem' as desired for more space between items */
+}

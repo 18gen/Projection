@@ -58,4 +58,14 @@ export const partners: Partner[] = [
         logo: '/logo/cscanlogo.jpg', // Replace with actual path to logo
         link: '/cs-can'
     },
+    {
+        name: "Sun Life",
+        logo: "./logo/sunlifelogo.png",
+        link: "https://www.sunlife.ca/en/"
+    },
+    {
+        name: 'University of Waterloo',
+        logo: '/logo/uwlogo.png', // Replace with actual path to logo
+        link: '/uwaterloo'
+    },
 ];

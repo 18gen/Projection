@@ -1,7 +1,6 @@
 schedule-container {
     max-width: 1200px;
     margin: auto;
-    padding: 2rem;
     background: black; /* Assuming black background based on your screenshot */
     color: white; /* Assuming white text based on your screenshot */
   }
@@ -9,6 +8,7 @@ schedule-container {
   .schedule-header {
     text-align: center;
     color: #f1f3f4; /* Or the specific color code used for the header */
+    margin-top: 3rem;
     margin-bottom: 2rem;
   }
   
@@ -17,6 +17,16 @@ schedule-container {
     margin-bottom: 2rem; /* Spacing between Day 0 and the two-column layout */
   }
   
+.day-full-width, .day-column {
+    padding: 0 5%; /* Adds space on the right and left of each day's block */
+}
+
+.day-full-width {
+    margin: auto;
+    max-width: 700px;
+    padding: 30px;
+}
+
   /* Days 1 and 2 - Two Column Layout */
   .days-container {
     display: flex;
@@ -62,5 +72,10 @@ schedule-container {
   
     .day-column {
       flex-basis: 100%;
+    }
+
+    .day-full-width {
+        max-width: 100%; /* Allows "Day 0" to expand naturally on smaller screens */
+        padding: 0 5%;
     }
   }
