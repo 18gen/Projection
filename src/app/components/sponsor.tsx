@@ -28,15 +28,6 @@ const SponsorCardTier = ({ name, logo, link }: { name: string; logo: string; lin
         </div>
     );
 };
-
-// SponsorCard component (already provided)
-
-interface PartnerProps {
-  name: string;
-  logo: string;
-  link: string;
-}
-
 // PartnerCard component
 const PartnerCard =  ({ name, logo, link }: { name: string; logo: string; link: string }) =>  {
   return (

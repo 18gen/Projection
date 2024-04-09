@@ -263,7 +263,7 @@ a:hover {
 }
 
 .partner-card {
-    padding: 20px;
+    padding: 20px 10%;
     background: #fff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -279,15 +279,22 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 320px; /* The logo block will take up the full width of the partner-card */
-    height: 130px;
+    max-width: 400px; /* The logo block will take up the full width of the partner-card */
+    max-height: 200px;
     padding: 10px; /* Adjust the padding as needed */
     box-sizing: border-box;
 }
 
 .partner-logo img {
-    max-width: 100%; /* Ensures the logo is responsive and does not overflow */
-    max-height: 100px; /* Adjust the height as needed */
+    width: auto; /* Adjust width automatically */
+    height: auto; /* Adjust height automatically */
+    max-width: 100%; /* Ensure it doesn't overflow its container */
+    max-height: 100px; /* Adjust this value as needed */
+}
+
+@media (max-width: 500px) {
+    .partner-card {
+    }
 }
 
 .partner-card:hover {

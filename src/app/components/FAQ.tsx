@@ -1,9 +1,10 @@
-"use client";
+'use client'
 import React from 'react';
 import { useState } from 'react';
+import "./FAQ.css";
 
 const FAQ = () => {
-  const [expandedIndex, setExpandedIndex] = useState(-1);
+const [expandedIndex, setExpandedIndex] = useState(-1);
 
   const faqs = [
     {
@@ -22,24 +23,20 @@ const FAQ = () => {
   ];
 
   const handleToggle = (index: number) => {
-    if (expandedIndex === index) {
-      setExpandedIndex(-1);
-    } else {
-      setExpandedIndex(index);
-    }
+    setExpandedIndex(expandedIndex === index ? -1 : index);
   };
 
   return (
-    <div style={{ padding: '5rem' }}>
-      <h2 className='text-2xl font-bold mb-4'>FAQ</h2>
-      {faqs.map((faq, index) => (
-        <div key={index} onClick={() => handleToggle(index)} className='cursor-pointer mb-4'>
-          <h3 className='text-lg font-semibold'>{faq.question}</h3>
-          {expandedIndex === index && <p className='mt-2'>{faq.answer}</p>}
-        </div>
-      ))}
+    <div className="faq-container">
+        <h2 className='text-2xl font-bold mb-4'>FAQ</h2>
+        {faqs.map((faq, index) => (
+            <div key={index} onClick={() => handleToggle(index)} className='faq-item cursor-pointer'>
+                <h3 className='text-lg font-semibold'>{faq.question}</h3>
+                {expandedIndex === index && <p className='mt-2'>{faq.answer}</p>}
+            </div>
+        ))}
     </div>
-  );
+);
 };
 
 export default FAQ;
