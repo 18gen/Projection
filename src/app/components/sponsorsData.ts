@@ -46,7 +46,7 @@ export const partners: Partner[] = [
     {
         name: "Sun Life",
         logo: "./logo/sunlifelogo.png",
-        link: "https://www.sunlife.ca/en/"
+        link: '/cs-can'
     },
     {
         name: 'University of Waterloo',
