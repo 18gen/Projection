@@ -40,32 +40,32 @@ export const partners: Partner[] = [
     },
     {
         name: 'CS-CAN | INFO-CAN',
-        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
+        logo: '/logo/white.jpg', // Replace with actual path to logo
         link: '/cs-can'
     },
     {
         name: "Sun Life",
-        logo: '/logo/comingSoon.jpg',
+        logo: '/logo/white.jpg',
         link: '/cs-can'
     },
     {
         name: 'University of Waterloo',
-        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
+        logo: '/logo/white.jpg', // Replace with actual path to logo
         link: '/uwaterloo'
     },
     {
         name: 'CS-CAN | INFO-CAN',
-        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
+        logo: '/logo/white.jpg', // Replace with actual path to logo
         link: '/cs-can'
     },
     {
         name: "Sun Life",
-        logo: '/logo/comingSoon.jpg',
+        logo: '/logo/white.jpg',
         link: "https://www.sunlife.ca/en/"
     },
     {
         name: 'University of Waterloo',
-        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
+        logo: '/logo/white.jpg', // Replace with actual path to logo
         link: '/uwaterloo'
     },
 ];
