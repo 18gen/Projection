@@ -30,42 +30,42 @@ export const sponsors: Sponsor[] = [
 export const partners: Partner[] = [
     {
         name: "Sun Life",
-        logo: "./logo/sunlifelogo.png",
+        logo: '/logo/uwlogo.png',
         link: "https://www.sunlife.ca/en/"
     },
     {
         name: 'University of Waterloo',
-        logo: '/logo/uwlogo.png', // Replace with actual path to logo
+        logo: '/logo/cscanlogo.jpg', // Replace with actual path to logo
         link: '/uwaterloo'
     },
     {
         name: 'CS-CAN | INFO-CAN',
-        logo: '/logo/cscanlogo.jpg', // Replace with actual path to logo
+        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
         link: '/cs-can'
     },
     {
         name: "Sun Life",
-        logo: "./logo/sunlifelogo.png",
+        logo: '/logo/comingSoon.jpg',
         link: '/cs-can'
     },
     {
         name: 'University of Waterloo',
-        logo: '/logo/uwlogo.png', // Replace with actual path to logo
+        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
         link: '/uwaterloo'
     },
     {
         name: 'CS-CAN | INFO-CAN',
-        logo: '/logo/cscanlogo.jpg', // Replace with actual path to logo
+        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
         link: '/cs-can'
     },
     {
         name: "Sun Life",
-        logo: "./logo/sunlifelogo.png",
+        logo: '/logo/comingSoon.jpg',
         link: "https://www.sunlife.ca/en/"
     },
     {
         name: 'University of Waterloo',
-        logo: '/logo/uwlogo.png', // Replace with actual path to logo
+        logo: '/logo/comingSoon.jpg', // Replace with actual path to logo
         link: '/uwaterloo'
     },
 ];
